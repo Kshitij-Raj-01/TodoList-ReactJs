@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+<h1>ToDo List React JS Project</h1>
+<h3>Home</h3>
+<p>Welcome to the ToDo List ReactJS Project Wiki! This project is a simple, yet powerful task management application built using ReactJS. It allows you to add tasks with descriptions, mark them as completed, view completed tasks, and delete tasks.</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3>Table of Contents</h3>
+<ul>
+ <li>Overview</li>
+ <li>Installation</li>
+ <li>Usage</li>
+ <li>Features</li>
+ <li>Component</li>
+ <li>Contributing</li>
+</ul>
+<h3>Overview</h3>
+<p>The ToDo List project is designed to help users manage their tasks efficiently. Users can add new tasks with descriptions, mark tasks as completed, view a list of completed tasks, and delete tasks. The project demonstrates the use of ReactJS for building interactive user interfaces.</p>
 
-## Available Scripts
+<h3>Installation</h3>
+Follow these steps to get the project up and running on your local machine.
 
-In the project directory, you can run:
+<h4>Prerequisites</h4>
+<ul>
+ <li>Node.js (>=12.x)</li>
+ <li>npm (>=6.x) or yarn (>=1.x)</li>
+</ul>
+<h4>Steps</h4>
+<ol>
+ <li>Clone the repository</li>
 
-### `npm start`
+```
+git clone https://github.com/Kshitij-Raj-01/TodoList-ReactJs.git
+cd TodoList-ReactJs
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<li>Install dependencies</li>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+```
+npm install
+# or
+yarn install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<li>Start the development server</li>
 
-### `npm run build`
+```
+npm start
+# or
+yarn start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open http://localhost:3000 to view it in the browser.
+</ol>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h3>Usage</h3>
+<h4>Adding a Task</h4>
+<ol>
+ <li>Enter the task title and description in the input fields.</li>
+ <li>Click the "Add" button.</li>
+</ol>
+<h4>Completing a Task</h4>
+<ol>
+ <li>Click the checkbox next to the task title.</li>
+ <li>The task will be moved to the "Completed Tasks" section.</li>
+</ol>
+<h4>Viewing Completed Tasks</h4>
+<ul>
+<li>Navigate to the "Completed Tasks" page to view all tasks marked as completed.</li>
+</ul>
+<h4>Deleting a Task</h4>
+<ul>
+<li>Click the delete icon (🗑️) next to the task title to remove the task.</li>
+</ul>
+<h3>Features</h3>
+<ul>
+<li><b>Add Tasks</b>: Add new tasks with titles and descriptions.</li>
+<li><b>Complete Tasks</b>: Mark tasks as completed.</li>
+<li><b>View Completed Tasks</b>: View a list of all completed tasks.</li>
+<li><b>Delete Tasks</b>: Remove tasks from the list.</li>
+</ul>
+<h3>Components</h3>
+<h4>TaskInput</h4>
+<ul>
+<li><b>Description</b>: Component for adding new tasks.</li>
+<li><b>Props</b>:</li>
+<ul>
+<li><b>handleAddTodo</b> (Array): Function to call for add the new tasks.</li>
+</ul>
+</ul>
+<h4>TaskList</h4>
+<ul>
+<li><b>Description</b>: Component for displaying the list of tasks.</li>
+<li><b>Props</b>:</li>
+<ul>
+<li><b>allTodos</b> (Array): List of tasks to display.</li>
+<li><b>handleCompleteTodo</b> (Function): Function to call when a task is completed.</li>
+<li><b>handleDeleteTodo</b> (Function): Function to call when a task is deleted.</li>
+</ul>
+</ul>
+<h4>TaskItem</h4>
+<ul>
+<li><b>Description</b>: Component for displaying a single task.</li>
+<li><b>Props</b>:</li>
+<ul>
+<li><b>handleCompleteTodo</b> (Function): Function to call when the task is completed.</li>
+<li><b>handleDeleteTodo</b> (Function): Function to call when the task is deleted.</li>
+</ul>
+</ul>
+<h3>CompletedTasks</h3>
+<ul>
+<li><b>Description</b>: Component for displaying completed tasks.</li>
+<li><b>Props</b>:</li>
+<ul>
+<li><b>completedTodos</b> (Array): List of completed tasks.</li>
+</ul>
+</ul>
+<h3>Contributing</h3>
+<p>We welcome contributions to the project. Please follow these steps to contribute:</p>
+<ol>
+<li>Fork the repository.</li>
+<li>Create a new branch <b>(git checkout -b feature-branch).</b></li>
+<li>Make your changes.</li>
+<li>Commit your changes <b>(git commit -m 'Add some feature').</b></li>
+<li>Push to the branch <b>(git push origin feature-branch).</b></li>
+<li>Create a new Pull Request.</li>
